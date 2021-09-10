@@ -1,0 +1,29 @@
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a routerLink="/">back to the index</a>
+</div>
+</div>
+
+<div class="container">
+  <form class="my-3" (onSubmit)="onBlogSubmit()">
+    <div class="form-group my-3">
+      <label for="blogTitle">Title</label>
+      <input type="text" class="form-control" [(ngModel)]="blogTitle" id="blogTitle" name="blogTitle"
+        placeholder="Enter Your Blog Title">
+    </div>
+    <div class="form-group my-3">
+      <label for="blogTitle">Categories</label>
+      <input type="text" class="form-control" id="blogCategories" [(ngModel)]="blogCategories" name="blogCategories"
+        placeholder="Enter the blog categories">
+    </div>
+    <div class="form-group my-3">
+      <label for="blogTitle">Content</label>
+      <textarea type="text" class="form-control" id="blogContent" [(ngModel)]="blogContent" name="blogContent"
+        placeholder="Enter the blog content"></textarea>
+    </div>
+    <div class="form-group my-3">
+      <button type="button" (click)="onBlogSubmit()" class="btn btn-success mx-3">Submit</button>
+      <button type="button" class="btn btn-warning mx-3" routerLink="/">Cancel</button>
+    </div>
+  </form>
+</div>

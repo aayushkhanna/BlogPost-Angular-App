@@ -1,0 +1,37 @@
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a routerLink="/">Return to home page</a>
+    </div>
+    <div class="float-right mx-3">
+        <div class="form-group form-check">
+            <input  type="checkbox" class="form-check-input" id="like" (click)="onLikeChange()"
+            [(ngModel)]="currentBlogLiked">
+            <label [ngClass]="{'likeButton': !currentBlogLiked}" class="form-check-label" for="exampleCheck1">{{currentBlogLiked?'Unlike':'Like'}}</label>
+        </div>
+    </div>
+    <div class="float-right mx-6">
+        <button class="btn btn-success" (click)="onEdit()">Edit Blog</button>
+    </div>
+    <div class="float-right mx-3">
+        <button class="btn btn-danger" (click)="onDelete()">Delete Blog</button>
+    </div>
+</div>
+
+<div class="container">
+    <form class="my-3">
+        <div class="form-group my-3">
+            <label for="blogTitle">Blog Title</label>
+            <input type="text" class="form-control" [(ngModel)]="currentBlogTitle" id="blogTitle" name="blogTitle">
+        </div>
+        <div class="form-group my-3">
+            <label for="blogTitle">Categories</label>
+            <input type="text" class="form-control" id="blogCategories" [(ngModel)]= "currentBlogCategories" name="blogCategories">
+        </div>
+        <div class="form-group my-3">
+            <label for="blogTitle">Content</label>
+            <textarea type="text" class="form-control" id="blogContent" [(ngModel)]="currentBlogContent"
+                name="blogContent"></textarea>
+        </div>
+
+    </form>
+</div>

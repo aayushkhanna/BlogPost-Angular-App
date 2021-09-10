@@ -1,0 +1,6 @@
+.MyCard:hover {
+    border:1px solid #3E7DC0;
+    background-color: lightblue;
+    color: white;
+}
+
